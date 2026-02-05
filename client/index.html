@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="chat-header">
+            <div class="header-top">
+                <div class="status-indicator" id="connection-status"></div>
+                <h1>Nebula Space</h1>
+                <div class="user-badge" id="user-badge">Guest</div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-link active" data-tab="chat">Chat</a>
+                <a href="#" class="nav-link" data-tab="game">Tic Tac Toe</a>
+            </nav>
+        </header>
+
+        <div class="content-area">
+            <!-- CHAT VIEW -->
+            <section id="chat-view" class="view-section active">
+                <div class="chat-window" id="chat-window">
+                    <div class="message system-message">
+                        <span>Welcome to the void.</span>
+                    </div>
+                </div>
+
+                <form class="input-area" id="chat-form">
+                    <input type="text" id="username-input" placeholder="User" maxlength="12" class="username-input">
+                    <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off"
+                        class="message-input">
+                    <button type="submit" class="send-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+            </section>
+
+            <!-- GAME VIEW -->
+            <section id="game-view" class="view-section">
+                <div class="game-container">
+                    <div class="turn-indicator" id="turn-indicator">Player X's Turn</div>
+                    <div class="board" id="game-board">
+                        <div class="cell" data-index="0"></div>
+                        <div class="cell" data-index="1"></div>
+                        <div class="cell" data-index="2"></div>
+                        <div class="cell" data-index="3"></div>
+                        <div class="cell" data-index="4"></div>
+                        <div class="cell" data-index="5"></div>
+                        <div class="cell" data-index="6"></div>
+                        <div class="cell" data-index="7"></div>
+                        <div class="cell" data-index="8"></div>
+                    </div>
+                    <button class="restart-btn" id="restart-btn">Restart Game</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
